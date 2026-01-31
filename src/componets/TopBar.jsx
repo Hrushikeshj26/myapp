@@ -6,7 +6,7 @@ import { Camera, EllipsisVertical, Search } from "lucide-react-native";
 export default function TopBar() {
   return (
     <SafeAreaView style={styles.topBar}>
-        <StatusBar />
+        <StatusBar backgroundColor={'#2d7816'}/>
         <View style={styles.topBarContainer1}>
           <Text style={styles.titleText}>WhatsApp</Text>
           <View style={styles.topBarIcons}>
@@ -27,7 +27,7 @@ export default function TopBar() {
 
 const styles = StyleSheet.create({
   topBar: {
-    backgroundColor: "green",
+    backgroundColor: "#2d7816",
     paddingTop: 20,
     paddingHorizontal: 15,
     width: "100%",

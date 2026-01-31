@@ -33,7 +33,7 @@ export default function Chats() {
   },
   {
     id: '5',
-    name: 'Mom',
+    name: 'Moana',
     profilePic: 'https://randomuser.me/api/portraits/women/10.jpg',
     message: 'See you at dinner.',
     time: 'Mon'
@@ -161,37 +161,47 @@ export default function Chats() {
     </View>
   );
 
+  const renderSeparator = () => (
+    <View
+      style={{
+        height: 1,           
+        backgroundColor: '#7c7c7c',
+        marginLeft: 20,            
+        marginRight: 20,           
+        opacity: 0.5,
+      }}
+    />
+  );
+
   return (
-    <ScrollView>
         <FlatList
         data={chatData}              
         renderItem={renderChatRow} 
         keyExtractor={item => item.id}
+        ItemSeparatorComponent={renderSeparator}
         style={styles.list}
       />
-    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
     list: {
-    backgroundColor: "white",
+    backgroundColor: "#1e1e1e",
+    flex: 1,
   },
   chatRow: {
     flexDirection: "row",
     alignItems: "center",
     padding: 15,
-    borderBottomColor: '#ededed',
-    borderWidth: 0.5
   },
   profilePic: {
     width: 50,
     height: 50,
-    borderRadius: 25, // Makes it a perfect circle
+    borderRadius: 25, 
     marginRight: 15,
   },
   chatDetails: {
-    flex: 1, // Takes up remaining space
+    flex: 1, 
   },
   rowHeader: {
     flexDirection: "row",
@@ -201,7 +211,7 @@ const styles = StyleSheet.create({
   nameText: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "black",
+    color: "white",
   },
   timeText: {
     fontSize: 12,
